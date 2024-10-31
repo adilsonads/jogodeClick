@@ -1,0 +1,135 @@
+/* Carregar fonte Exo 2 para estilização dos textos */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700&display=swap');
+
+/* Estilo principal da página */
+body {
+    display: flex; /* Centraliza os elementos dentro do body */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    height: 100vh; /* Ocupa a altura total da janela */
+    margin: 0; /* Remove margens padrão */
+    font-family: 'Exo 2', sans-serif; /* Fonte para todo o corpo */
+    background-color: #1c2f41; /* Cor de fundo inspirada em Valorant */
+    color: #ECE8E1; /* Cor do texto */
+    user-select: none; /* Impede a seleção de texto na página */
+    overflow: hidden; /* Oculta o overflow para evitar barras de rolagem */
+}
+
+/* Texto de pontuação, temporizador e erros */
+#score, #timer, #errors {
+    font-size: 18px; /* Tamanho da fonte para os contadores */
+    margin: 10px; /* Espaçamento ao redor do texto */
+    color: #FF4655; /* Vermelho inspirado em Valorant */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    text-shadow: 
+        2px 2px 0px #000000, /* Sombra de texto na diagonal */
+        -2px -2px 0px #837a7a; /* Sombra na diagonal oposta */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilo do círculo que representa o alvo do jogo */
+#circle {
+    width: 50px; /* Largura inicial */
+    height: 50px; /* Altura inicial */
+    background-color: #00FFA3; /* Cor verde neon */
+    border-radius: 50%; /* Deixa o elemento circular */
+    position: absolute; /* Posicionamento absoluto na tela */
+    display: none; /* Escondido até que o jogo comece */
+    cursor: pointer; /* Muda o cursor para indicar clique */
+    box-shadow: 
+        0px 0px 10px rgba(0, 255, 163, 0.8), /* Brilho leve */
+        0px 0px 20px rgba(0, 255, 163, 0.5),
+        0px 0px 30px rgba(0, 255, 163, 0.3); /* Brilho mais intenso */
+    transition: width 0.2s, height 0.2s; /* Transição para suavizar o redimensionamento */
+}
+
+/* Botão de reiniciar com estilo inspirado em Valorant */
+button {
+    font-family: 'Press Start 2P', cursive; /* Fonte para o botão */
+    font-size: 12px; /* Tamanho da fonte */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    color: #0F1923; /* Cor do texto */
+    background-color: #FF4655; /* Fundo do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 3px solid #0F1923; /* Borda do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(255, 70, 85, 0.8); /* Sombra */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
+    text-shadow: 1px 1px #000000; /* Sombra de texto */
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #ECE8E1; /* Altera a cor de fundo no hover */
+    color: #FF4655; /* Altera a cor do texto */
+    box-shadow: 0px 0px 15px rgba(255, 70, 85, 1); /* Intensifica a sombra */
+}
+
+/* Contêiner que agrupa o menu de tamanho e o tutorial */
+#controlsContainer {
+    position: absolute; /* Posiciona no canto da tela */
+    top: 15px; /* Alinha o contêiner ao topo */
+    right: 15px; /* Alinha o contêiner à direita */
+    display: flex; /* Exibe os elementos em coluna */
+    flex-direction: column; /* Alinhamento em coluna */
+    gap: 10px; /* Espaçamento entre o menu e o tutorial */
+    box-shadow: 0px 0px 10px rgba(255, 70, 85, 0.8); /* Sombra */
+    background: #1B2733; /* Cor de fundo */
+    width: 180px; /* Largura igual à do menu de controle */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    color: #ECE8E1; /* Cor do texto */
+    font-size: 12px; /* Tamanho da fonte */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    text-align: center; /* Centraliza o texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+
+}
+
+/* Menu de controle de tamanho, Tutorial que explica as regras do jogo */
+#circleSizeMenu, #tutorial {
+    margin: 0px;
+   
+}
+
+/* Barra de ajuste do tamanho do círculo */
+#circleSize {
+    width: 100%; /* Barra de controle ocupa toda a largura */
+    background: #FF3D5C; /* Cor de fundo do controle */
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 
+        0px 0px 20px rgba(0, 255, 163, 0.5); /* Brilho ao redor */
+    transition: width 0.2s, height 0.2s; /* Suaviza o redimensionamento */
+}
+
+/* Visualização do tamanho atual da bolinha */
+#previewCircle {
+    width: 50px; /* Largura padrão da visualização */
+    height: 50px; /* Altura padrão da visualização */
+    margin-top: 10px; /* Espaçamento superior */
+    background-color: #00FFA3; /* Cor verde neon */
+    border-radius: 50%; /* Forma circular */
+    box-shadow: 
+        0px 0px 10px rgba(0, 255, 163, 0.8), /* Sombras e brilhos */
+        0px 0px 20px rgba(0, 255, 163, 0.5),
+        0px 0px 30px rgba(0, 255, 163, 0.3);
+    transition: width 0.2s, height 0.2s; /* Suaviza o redimensionamento */
+}
+h2{
+    font-size: 20px; /* Tamanho da fonte */
+    margin: 8px;
+}
+#Recorde{
+    position: fixed; bottom: 0;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o texto */
+    width: 30%; /* Largura padrão da visualização */
+    height: 100px; /* Altura padrão da visualização */
+    background-color: #042643; /* Cor de fundo inspirada em Valorant */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(255, 70, 85, 0.8); /* Sombra */
+    background: #1B2733; /* Cor de fundo */
+}

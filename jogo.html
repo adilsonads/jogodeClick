@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Clique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="score">Pontos: 0</div>
+    <div id="timer">Tempo restante: 10</div>
+    <div id="errors">Erros: 0</div>
+    <div id="circle"></div>
+    <button id="resetButton">Começar novo jogo</button>
+
+    <div id="controlsContainer">
+        <!-- Menu de controle de tamanho no canto superior direito -->
+        <div id="circleSizeMenu">
+            <h2>Ajustes</h2>
+            <label for="circleSize">Tamanho da Bolinha:</label>
+            <input type="range" id="circleSize" min="20" max="200" value="50">
+            <div id="previewCircle"></div>
+        </div>
+        <div id="tutorial">
+            <h2>Tutorial:</h2>
+            <p>O objetivo do jogo é acertar a bolinha com o cursor do mouse o maximo de vezes antes que o tempo acabe!
+            </p>
+        </div>
+    </div>
+    <div id="Recorde">
+        <h2>Recorde</h2>
+        <div id="recordPontuacao">Pontos: --</div>
+        <div id="recordErros">Erros: --</div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
