@@ -133,3 +133,10 @@ h2{
     box-shadow: 0px 0px 10px rgba(255, 70, 85, 0.8); /* Sombra */
     background: #1B2733; /* Cor de fundo */
 }
+#feedback{
+    position: fixed; /* Fixa no canto inferior direito */
+    bottom: 15px; /* Distância do fundo */
+    right: 15px; /* Distância da direita */
+    text-align: center;
+    color: #ECE8E1;
+}

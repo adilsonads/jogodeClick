@@ -16,6 +16,7 @@ const circleSizeInput = document.getElementById('circleSize');
 const previewCircle = document.getElementById('previewCircle');
 const recordPontuacao = document.getElementById('recordPontuacao');
 const recordErros = document.getElementById('recordErros');
+const feedback = document.getElementById('feedback');
 
 // Atualiza o tamanho da bolinha e do preview sempre que o usuário ajustar o slider
 circleSizeInput.addEventListener('input', () => {
@@ -83,6 +84,8 @@ function iniciarJogo() {
     resetButton.style.display = 'none';
     controlsContainer.style.display = 'none';
     menuRecord.style.display = 'none';
+    feedback.style.display = 'none';
+
 
 
 
@@ -100,6 +103,8 @@ function iniciarJogo() {
             resetButton.style.display = 'block'; // Exibe o botão de reinício
             controlsContainer.style.display = 'block'; // Exibe o menu de tamanho do círculo após o jogo
             menuRecord.style.display = 'block';
+            feedback.style.display = 'block';
+
 
             // Remove o evento de clique para evitar contagem de erro após o fim do jogo
             document.removeEventListener('click', verificarCliqueFora);
