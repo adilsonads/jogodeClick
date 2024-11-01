@@ -140,3 +140,12 @@ h2{
     text-align: center;
     color: #ECE8E1;
 }
+
+#feedback-link {
+    color: #ECE8E1; /* Cor inicial do link */
+    text-decoration: none; /* Remove o sublinhado, se desejar */
+    
+}
+#feedback-link:visited {
+    color: red; /* Cor vermelha após o link ser visitado */
+}
